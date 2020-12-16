@@ -9,19 +9,21 @@ OBS: Alterar as variáveis de acordo com seu cenário.
 
 1 - Criar as pastas do sistema
 
-mkdir -p /home/joserf/docker/containers/hesk/{mysql,suporte}
+    # mkdir -p /home/joserf/docker/containers/hesk/{mysql,suporte}
 
 2 - Obtendo o script
 
-wget 
+    # cd /opt; git clone https://github.com/joserf/Hesk.git; cd Hesk; unzip suporte.zip -d /home/joserf/docker/containers/hesk/suporte
 
 3 - Subindo os containers
 
-docker-compose up -d
+    # vim docker-compose.yml 
+    
+    # docker-compose up -d
 
 4 - Banco de dados
 
-docker exec -i Hesk-MySQL mysql -uroot -p1234 hesk < /home/joserf/docker/containers/hesk/suporte/back-ups/Hesk-Mysql.sql
+    # docker exec -i Hesk-MySQL mysql -uroot -p1234 hesk < /home/joserf/docker/containers/hesk/suporte/back-ups/Hesk-Mysql.sql
 
 http://192.168.167.122:8585/admin
 
